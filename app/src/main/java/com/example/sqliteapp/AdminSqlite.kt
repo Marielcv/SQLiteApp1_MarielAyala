@@ -11,13 +11,19 @@ class AdminSQLite
      version:Int):SQLiteOpenHelper(context,name,factory,version) {
     override fun onCreate(baseDeDatos: SQLiteDatabase?) {
         baseDeDatos?.execSQL("create table articulos" +
-                    "(codigo int primary key, descripcion text,precio real)")
+                "(codigo int primary key, descripcion text,precio real)")
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+
+    }
+
+}
 
 
-        override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
 
 
-        }
+
 
 
 
